@@ -1,0 +1,67 @@
+BÀI 2 - LÝ THUYẾT GIT
+
+1. Lệnh git init
+
+Công dụng:
+Lệnh git init dùng để khởi tạo một Git repository trong thư mục hiện tại.
+
+Ví dụ:
+git init
+
+Sau khi chạy lệnh này, Git tạo ra một thư mục ẩn có tên .git.
+Thư mục .git lưu thông tin quản lý phiên bản và lịch sử commit của dự án.
+
+
+2. Lệnh git add <file-name>
+
+Công dụng:
+Lệnh git add <file-name> dùng để đưa một file cụ thể từ working directory vào staging area.
+
+Ví dụ:
+git add test.txt
+
+Sau khi chạy lệnh trên, file test.txt được chuẩn bị để đưa vào commit tiếp theo.
+
+
+3. Lệnh git add .
+
+Công dụng:
+Lệnh git add . dùng để đưa tất cả file mới, file đã chỉnh sửa và file đã xóa trong thư mục hiện tại vào staging area.
+
+Ví dụ:
+git add .
+
+Dấu chấm đại diện cho thư mục hiện tại và toàn bộ nội dung bên trong thư mục đó.
+
+
+4. Lệnh git commit -m "message"
+
+Công dụng:
+Lệnh git commit dùng để lưu các thay đổi đang có trong staging area vào repository.
+
+Ví dụ:
+git commit -m "Bài 2: Git và Markdown"
+
+Trong đó:
+- git commit là lệnh tạo commit.
+- -m là tùy chọn cho phép nhập nội dung mô tả commit.
+- "Bài 2: Git và Markdown" là nội dung mô tả thay đổi.
+
+Một commit được xem là một phiên bản hoặc một mốc lịch sử của dự án.
+
+
+5. Quy trình Git cơ bản
+
+Bước 1: Tạo hoặc chỉnh sửa file trong working directory.
+
+Bước 2: Kiểm tra trạng thái bằng lệnh:
+git status
+
+Bước 3: Đưa thay đổi vào staging area:
+git add .
+
+Bước 4: Tạo commit:
+git commit -m "message"
+
+Bước 5: Đẩy commit lên GitHub:
+git push
