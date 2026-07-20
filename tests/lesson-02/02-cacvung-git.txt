@@ -4,56 +4,91 @@ Git có ba vùng chính:
 
 1. Working directory
 
-Working directory là nơi chứa các file mà người dùng đang tạo, sửa hoặc xóa.
+- Working directory là nơi chứa các file mà người dùng đang tạo, sửa hoặc xóa.
 
-File mới được tạo nhưng chưa chạy git add sẽ nằm trong working directory và có trạng thái untracked.
+- File mới được tạo nhưng chưa chạy git add sẽ nằm trong working directory và có trạng thái untracked.
 
-File đã được Git theo dõi nhưng vừa chỉnh sửa sẽ có trạng thái modified.
-
+- File đã được Git theo dõi nhưng vừa chỉnh sửa sẽ có trạng thái modified.
 
 2. Staging area
 
-Staging area là nơi chứa các thay đổi đã được lựa chọn để chuẩn bị commit.
+- Staging area là nơi chứa các thay đổi đã được lựa chọn để chuẩn bị commit.
 
-Dùng lệnh sau để đưa một file vào staging area:
+- Dùng lệnh git add <file-name> để đưa một file vào staging area
 
-git add <file-name>
-
-Dùng lệnh sau để đưa tất cả file vào staging area:
-
-git add .
-
+- Dùng lệnh git add . để đưa tất cả file vào staging area
 
 3. Repository
 
-Repository là nơi lưu các thay đổi đã được commit.
+- Repository là nơi lưu các thay đổi đã được commit.
 
-Dùng lệnh sau để đưa các file từ staging area vào repository:
-
-git commit -m "message"
-
+- Dùng lệnh git commit -m "message" để đưa các file từ staging area vào repository.
 
 4. Local
 
-Local là thư mục chưa được khởi tạo Git.
+- Local là thư mục chưa được khởi tạo Git.
 
-Khi chưa chạy git init, tất cả file chỉ nằm trong vùng local.
+- Khi chưa chạy git init, tất cả file chỉ nằm trong vùng local.
 
-Sau khi chạy git init, thư mục trở thành một Git repository và các file chuyển sang working directory.
+- Sau khi chạy git init, thư mục trở thành một Git repository và các file chuyển sang working directory.
 
+LIỆT KÊ CÁC FILE THEO TỪNG VÙNG SAU KHI THAO TÁC
+a. Tạo 3 file: file1, file2, file3
+Local:
+- file1
+- file2
+- file3
+Working Directory: Không có
+Staging Area: Không có
+Repository: Không có
 
-5. Quá trình di chuyển của file
+b. Chạy lệnh: git init
+- Sau khi chạy git init, thư mục được khởi tạo Git.
+- Ba file chuyển từ vùng Local sang Working Directory.
+Local: Không có
+Working Directory:
+- file1
+- file2
+- file3
+Staging Area: Không có
+Repository: Không có
 
-        Local
-        |
-        | git init
-        v
-        Working directory
-        |
-        | git add <file-name> hoặc git add .
-        v
-        Staging area
-        |
-        | git commit -m "message"
-        v
-        Repository
+c. Chạy lệnh: git commit -m "init project"
+- Lệnh git commit không được thực hiện vì chưa đưa file nào vào vùng staging.
+Local: Không có
+Working Directory:
+- file1
+- file2
+- file3
+Staging Area: Không có
+Repository: Không có
+
+d. Chạy lệnh: git add file1
+- file1 được đưa từ Working Directory vào Staging Area.
+Local: Không có
+Working Directory:
+- file2
+- file3
+Staging Area:
+- file1
+Repository: Không có
+
+e. Chạy lệnh: git commit -m "add file1"
+- file1 được commit vào Repository.
+Local: Không có
+Working Directory:
+- file2
+- file3
+Staging Area: Không có
+Repository:
+- file1
+
+f. Chạy lệnh: git commit -m "add file"
+- Lệnh commit không thực hiện được vì Staging Area đang trống.
+Local: Không có
+Working Directory:
+- file2
+- file3
+Staging Area: Không có
+Repository:
+- file1
