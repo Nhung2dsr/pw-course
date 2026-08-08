@@ -1,0 +1,25 @@
+1. Sử dụng XPath tuyệt đối, chọn phần tử sau:
+    1.1. Lấy input "Họ và tên":
+        /html/body/div/div[1]/form/input[1]
+
+    1.2. Lấy button "Đăng ký":
+        /html/body/div/div[1]/form/button
+
+    1.3. Lấy hàng đầu tiên trong tbody:
+        /html/body/div/div[2]/table/thead/tbody/tr[1]
+
+2. Sử dụng XPath tương đối cho phần tử sau:
+    2.1. Lấy input có placeholder= "Số điện thoại":
+        //input[@placeholder = 'Số điện thoại']
+    
+    2.2. Lấy email của "Trần Thị Bình" (hàng 2, cột 2)
+        //table[@id = 'resultTable']//tr[td='Trần Thị Bình']/td[2]
+    
+    2.3. Lấy số điện thoại của "Lê Hoàng Cường" (hàng 3, cột 3)
+        //table[@id = 'resultTable']//tr[td = 'Lê Hoàng Cường']/td[3]
+    
+    2.4. Lấy button có class = "btn-register"
+        //button [@class = 'btn-register']
+
+    2.5. Lấy table có id = "resultTable"
+        //table[@id = 'resultTable']
