@@ -8,7 +8,6 @@ test('Bai 1', async ({ page }) => {
 
     await test.step('Step 2: Click vào Bài học 1', async () => {
         const bai1 = page.locator('//a[@href = "01-xpath-register-page.html"]');
-
         await bai1.click();
     });
 
