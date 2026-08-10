@@ -55,7 +55,7 @@ test('Bai 1', async ({ page }) => {
 
         /* Upload file
         const inputFile = page.locator('#profile');
-        await inputFile.setInputFiles("C:/Users/DELL/Downloads/images.png");
+        await inputFile.setInputFiles("C:/Users/DELL/Downloads/test2.spec.tsimages.png");
         */
         
         const biography = page.locator('//textarea[@id="bio"]');
