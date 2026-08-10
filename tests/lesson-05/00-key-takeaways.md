@@ -2,7 +2,7 @@
 ## 1. DOM (Document Object Model) ##
 - __Node là 1 phần tử cấu tạo nên DOM.__
 - __Các thẻ tiêu chuẩn thường gặp:__
-    - ```<html>```: là thẻ để 
+    - ```<html>```: là thẻ ngôn ngữ để đánh dấu chính của trang web. 
     - ```<head>```: chứa tiêu đề, icon và link trang web và các link liên quan đến trang web.
     - ```<body>```: là những thứ ta nhìn thấy trên trang web.
 - __Các thẻ bố cục và ngữ nghĩa:__
